@@ -67,6 +67,19 @@ a {
 a:hover {
     text-decoration: underline;
 }
+.dynamic-content {
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px dashed #007BFF;
+    background-color: #f0f8ff;
+    font-size: 18px;
+    text-align: center;
+    transition: opacity 0.5s ease;
+}
+
+/* Estilo para a animação de fade-out */
+.fade-out {
+    opacity: 0;}
 
 h2 a {
     font-size: 1.2rem;

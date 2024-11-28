@@ -28,14 +28,33 @@
 
         <section>
             <h1>Sites que eu uso para estudo</h1>
-            <h2><a href="listaLinks.html">Sites</a></h2>
+            <h2><a href="javascript:void(0);" onclick="redirectToPage('listaLinks.html')">Sites</a></h2>
         </section>
 
         <section>
             <h1>Projeto feito para a matéria de Projetos 1 na Cesar School</h1>
-            <h2><a href="projetoArvoreEmocoes.html">Projeto Árvore das Emoções</a></h2>
+            <h2><a href="javascript:void(0);" onclick="redirectToPage('projetoArvoreEmocoes.html')">Projeto Árvore das Emoções</a></h2>
         </section>
+
+        <!-- Área para exibir o conteúdo alterado -->
+        <div class="dynamic-content" id="content-area">
+            Clique em um link acima para ver o conteúdo alterado aqui.
+        </div>
     </div>
-    <script>alert("Seja bem-vindo a minha biografia")</script>
+    <script>
+        // Função para adicionar a animação de fade-out e redirecionar
+        function redirectToPage(url) {
+            // Referência ao elemento de conteúdo
+            const contentArea = document.getElementById('content-area');
+
+            // Adiciona a classe fade-out para ocultar o conteúdo
+            contentArea.classList.add('fade-out');
+
+            // Após a animação de fade-out, redireciona para a nova página
+            setTimeout(function() {
+                window.location.href = url; // Redireciona para a URL especificada
+            }, 500); // Atraso de 500ms para dar tempo do fade-out acontecer
+        }
+    </script>
 </body>
 </html>
